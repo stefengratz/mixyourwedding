@@ -1,0 +1,58 @@
+/*
+
+	Supersized - Fullscreen Slideshow jQuery Plugin
+	Version : 3.2.7
+	Site	: www.buildinternet.com/project/supersized
+	
+	Theme 	: Shutter 1.2
+	Author	: Sam Dunn
+	Company : One Mighty Roar (www.onemightyroar.com)
+	License : MIT License / GPL License
+	
+*/
+
+	/* Controls Bar
+	----------------------------*/
+	#controls-wrapper { margin:0 auto; height:58px; width:100%; bottom:0px; left:0; z-index:4; position:fixed; }
+		#controls { overflow:hidden; height:100%; position:relative; text-align:left; z-index:5; }
+			#slidecounter { float:left; color:#999; font:14px "Helvetica Neue", Helvetica, Arial, sans-serif; text-shadow:#000 0 -1px 0; margin:0px 10px 0 15px; line-height:42px; }
+			#slidecaption { 
+				position: fixed;
+				bottom: 20px;
+				left: 20px;
+				opacity: 0;
+				-webkit-transition: all .3s ease; -moz-transition: all .3s ease; transition: all .3s ease;
+				bottom: -60px
+			}
+			
+			body:hover #slidecaption
+			{
+				bottom: 20px;
+				opacity: 1;
+			}
+			
+			#navigation { float:right; margin:0px 20px 0 0; }
+			
+			a#prevslide, a#nextslide { display: block; width: 60px; height: 60px; text-align: center; position: absolute; bottom: 49%; z-index: 2; overflow: hidden; cursor: pointer; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; transition: all .3s ease; background: rgba(256,256,256,0.8); line-height: 45px; opacity: 0; }
+			
+			a#prevslide:before, a#nextslide:before  { font-family: "FontAwesome"; font-size: 20px; display: block; content: '\f104'; color: #000; margin-top: 9px; }
+a#nextslide:before  { content: '\f105'; }
+
+			a#prevslide { left: -60px; }
+			a#nextslide { right: -60px; }
+			
+			body:hover a#prevslide { 
+				opacity: 1; left: 20px;
+			}
+			body:hover a#nextslide { 
+				opacity: 1; right: 20px;
+			}
+				
+				ul#slide-list{ padding:15px 0; float:left; position:absolute; left:50%; }
+					ul#slide-list li{ list-style:none; width:12px; height:12px; float:left; margin:0 5px 0 0; }
+						ul#slide-list li.current-slide a, ul#slide-list li.current-slide a:hover{ background-position:0 0px; }
+						ul#slide-list li a{ display:block; width:12px; height:12px; background:url('../img/nav-dot.png') no-repeat 0 -24px; }
+							ul#slide-list li a:hover{ background-position:0 -12px; cursor:pointer; }
+				
+				#tray-button{ float:right; margin-top:1px; border-left:1px solid #333; background:url('../img/bg-hover.png') repeat-x 0 44px; }
+					#tray-button:hover{ background-position:0 1px; cursor:pointer; }
