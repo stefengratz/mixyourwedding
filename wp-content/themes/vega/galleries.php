@@ -104,6 +104,8 @@ if(empty($page_hide_header))
 				    $query_string .= '&gallerycat='.$term;
 				}
 				
+				$query_string .= '&orderby=ID&order=DESC';
+
 				query_posts($query_string);
 			
 				$key = 0;
