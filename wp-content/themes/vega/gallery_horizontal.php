@@ -61,6 +61,10 @@ wp_enqueue_script("horizontal_gallery", get_template_directory_uri()."/js/horizo
 		<div class="horizontal_gallery_info">
 			<div class="page_tagline"><?php echo get_the_excerpt(); ?></div>
 			<h1><?php the_title(); ?></h1>
+			<?php
+			    //Get Social Share
+			    get_template_part("/templates/facebook-social");
+			?>
 		</div>
 	</td>
 	<?php

@@ -77,6 +77,10 @@ if(!empty($page_header_background))
 				<div class="post_detail">
 				    <?php echo get_the_time(THEMEDATEFORMAT); ?>
 				</div>
+				<?php
+				    //Get Social Share
+				    get_template_part("/templates/facebook-social");
+				?>
     		</div>
     		
 			<?php

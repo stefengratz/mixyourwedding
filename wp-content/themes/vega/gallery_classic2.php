@@ -96,6 +96,10 @@ if(has_post_thumbnail($current_page_id, 'original'))
 					    <?php the_excerpt(); ?>
 					</div>
 					<h1><?php the_title(); ?></h1>
+					<?php
+					    //Get Social Share
+					    get_template_part("/templates/facebook-social");
+					?>
 	    		</div>
 	    		<br class="clear"/>
 	    	<?php

@@ -1741,4 +1741,39 @@ if (isset($_GET['activated']) && $_GET['activated']){
 	
     wp_redirect(admin_url("themes.php?page=functions.php&activate=true#pp_panel_demo-import"));
 }
+
+
+function custom_content_after_body_open_tag(){
+    /*$out = "<script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-105326493-1', 'auto');
+              ga('send', 'pageview');
+
+            </script>"; */
+    $out = '<div id="fb-root"></div>';
+    $out.= "<script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                  appId      : '1728897643991738',
+                  xfbml      : true,
+                  version    : 'v2.10'
+                });
+                FB.AppEvents.logPageView();
+              };
+
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = '//connect.facebook.net/vi_VN/sdk.js';
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>";
+    echo $out;
+}
+add_action('after_body_open_tag', 'custom_content_after_body_open_tag');
+
 ?>

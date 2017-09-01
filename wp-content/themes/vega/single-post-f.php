@@ -64,6 +64,10 @@ if(!empty($post_ft_bg) && has_post_thumbnail($current_page_id, 'original'))
 		<div class="post_detail">
 		    <?php echo get_the_time(THEMEDATEFORMAT); ?>
 		</div>
+		<?php
+		    //Get Social Share
+		    get_template_part("/templates/facebook-social");
+		?>
 	</div>
 </div>
 <?php

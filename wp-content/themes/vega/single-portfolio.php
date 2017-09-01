@@ -37,6 +37,10 @@ if(!empty($portfolio_header_background))
 <div id="page_caption" <?php if(!empty($pp_page_bg)) { ?> data-stellar-background-ratio="0.5" style="background-image:url('<?php echo esc_url($background_image); ?>');" class="hasbg parallax"<?php } ?>>
 	<div id="page_caption_wrapper_bg">
 		<h1><?php the_title(); ?></h1>
+		<?php
+		    //Get Social Share
+		    get_template_part("/templates/facebook-social");
+		?>
 		<div class="post_detail">
 		    <?php echo get_the_excerpt(); ?>
 		</div>
@@ -50,6 +54,10 @@ else
 <div id="page_caption">
 	<div id="page_caption_wrapper">
 		<h1><?php the_title(); ?></h1>
+		<?php
+		    //Get Social Share
+		    get_template_part("/templates/facebook-social");
+		?>
 		<div class="post_detail">
 		    <?php echo get_the_excerpt(); ?>
 		</div>

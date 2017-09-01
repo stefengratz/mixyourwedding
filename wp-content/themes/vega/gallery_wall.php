@@ -59,6 +59,10 @@ if(empty($gallery_hide_header))
     		<?php the_excerpt(); ?>
     	</div>
     	<h1><?php the_title(); ?></h1>
+        <?php
+            //Get Social Share
+            get_template_part("/templates/facebook-social");
+        ?>
     </div>
 </div>
 <?php

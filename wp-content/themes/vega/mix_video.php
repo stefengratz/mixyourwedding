@@ -163,6 +163,11 @@ get_template_part("/templates/template-blog-header");
                                 }
                             ?>
                         </div>
+                        <?php
+                            $share_page_url = esc_url(get_permalink());
+                            //Get Social Share
+                            get_template_part("/templates/facebook-social");
+                        ?>
                     </div>
                     <br class="clear"/>
                     

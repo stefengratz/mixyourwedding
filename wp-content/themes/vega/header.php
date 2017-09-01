@@ -91,6 +91,7 @@ if(is_single())
 </head>
 
 <body <?php body_class(); ?> <?php if(isset($pp_homepage_style) && !empty($pp_homepage_style)) { echo 'data-style="'.$pp_homepage_style.'"'; } ?>>
+	<?php do_action('after_body_open_tag'); ?>
 	<?php
 		//Check if disable right click
 		$pp_enable_right_click = get_option('pp_enable_right_click');

@@ -74,6 +74,10 @@ if(empty($page_hide_header))
     }
     ?>
     <h1><?php echo $page_title; ?></h1>
+    <?php
+	    //Get Social Share
+	    get_template_part("/templates/facebook-social");
+	?>
 </div>
 <?php
 }
