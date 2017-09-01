@@ -731,13 +731,16 @@ function pp_enqueue_front_page_scripts() {
 	}
 	
 	$gg_fonts_family = array_unique($gg_fonts_family);
+	/*
 	foreach($gg_fonts_family as $key => $gg_fonts_family_value)
 	{
 		if(!empty($gg_fonts_family_value) && $gg_fonts_family_value != 'Helvetica' && $gg_fonts_family_value != 'Arial')
 		{
 			wp_enqueue_style('google_font'.$key, "https://fonts.googleapis.com/css?family=".urlencode($gg_fonts_family_value).":400,700,400italic&subset=latin,cyrillic-ext,greek-ext,cyrillic", false, "", "all");
 		}
-	}
+	}*/
+
+	wp_enqueue_style('google_font', "https://fonts.googleapis.com/css?family=Dancing+Script|Quicksand:400,500|Roboto:400,400i,700&amp;subset=vietnamese", false, "", "all");
 	
 	if(isset($_GET['vegastyle']) && $_GET['vegastyle']==2 && THEMEDEMO) 
 	{
@@ -766,6 +769,7 @@ function pp_enqueue_front_page_scripts() {
 	    	    get_template_directory().'/css/magnific-popup.css',
 	    	    get_template_directory().'/js/flexslider/flexslider.css',
 	    	    get_template_directory().'/js/mediaelement/mediaelementplayer.css',
+	    	    get_template_directory().'/css/custom.css',
 	    	);
 	    	
 	    	if(empty($pp_animation))
@@ -797,6 +801,7 @@ function pp_enqueue_front_page_scripts() {
 	    wp_enqueue_style("mediaelement", get_template_directory_uri()."/js/mediaelement/mediaelementplayer.css", false, THEMEVERSION, "all");
 	    wp_enqueue_style("magnific-popup", get_template_directory_uri()."/css/magnific-popup.css", false, THEMEVERSION, "all");
 	    wp_enqueue_style("flexslider", get_template_directory_uri()."/js/flexslider/flexslider.css", false, THEMEVERSION, "all");
+	    wp_enqueue_style("custom.css", get_template_directory_uri().'/css/custom.css', false, THEMEVERSION, "all");
 	}
 	
 	//Add Font Awesome Support

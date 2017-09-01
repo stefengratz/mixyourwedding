@@ -611,4 +611,6 @@ jQuery(window).load(function(){
 	      move: 1
 	    });
     });
+
+    jQuery(".gm-style-iw").parent('div').addClass('marker-text');
 });
